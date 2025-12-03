@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>DJ Trinity #ThePartyDJ | Professional DJ Services</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
     :root{--p:#ff0066;--d:#0a0a0a;--l:#fff;--a:#00ffff}
     *{margin:0;padding:0;box-sizing:border-box}
@@ -13,35 +15,63 @@
     /* Clickable Top Banner */
     .site-banner{
       position:fixed;top:0;left:0;width:100%;background:rgba(0,0,0,0.9);
-      color:var(--l);text-align:center;padding:12px 20px;font-size:1.1rem;z-index:1000;
+      color:var(--l);text-align:center;padding:10px 15px;font-size:1rem;z-index:1000;
       border-bottom:3px solid var(--p);box-shadow:0 4px 15px rgba(255,0,102,0.4);
     }
     .site-banner a{color:var(--p);font-weight:bold;text-decoration:none;transition:0.3s}
     .site-banner a:hover{color:var(--a);text-decoration:underline}
 
-    header{min-height:100vh;background:linear-gradient(#000c,#000d),url('https://i.ibb.co/YBK9B2pD/1.jpg') center/cover fixed;
-      display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:90px 20px 20px}
-    h1{font-size:5.5rem;font-weight:900;text-shadow:0 0 30px var(--p);animation:g 2s ease-in-out infinite alternate}
+    header{min-height:100vh;background:linear-gradient(#000c,#000d),url('https://i.ibb.co/YBK9B2pD/1.jpg') center/cover no-repeat fixed;
+      display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:80px 20px 20px}
+    h1{font-size:4rem;font-weight:900;text-shadow:0 0 30px var(--p);animation:g 2s ease-in-out infinite alternate}
+    @media (min-width: 768px) {
+      h1{font-size:5.5rem;}
+    }
     @keyframes g{from{text-shadow:0 0 20px var(--p)}to{text-shadow:0 0 40px var(--p),0 0 60px var(--a)}}
-    h1+p{font-size:2.2rem;color:var(--p);margin:20px 0;font-weight:bold}
-    .btn{display:inline-block;margin:15px;padding:18px 40px;background:var(--p);color:#fff;text-decoration:none;
-      border-radius:50px;font-size:1.4rem;font-weight:bold;transition:.4s;box-shadow:0 0 20px #f0c6}
+    h1+p{font-size:1.8rem;color:var(--p);margin:20px 0;font-weight:bold}
+    @media (min-width: 768px) {
+      h1+p{font-size:2.2rem;}
+    }
+    .btn{display:inline-block;margin:15px;padding:15px 35px;background:var(--p);color:#fff;text-decoration:none;
+      border-radius:50px;font-size:1.2rem;font-weight:bold;transition:.4s;box-shadow:0 0 20px rgba(255,0,102,0.4)}
     .btn:hover{transform:scale(1.1);background:var(--a);color:var(--d)}
+    @media (min-width: 768px) {
+      .btn{padding:18px 40px;font-size:1.4rem;}
+    }
 
-    section{padding:100px 20px;text-align:center}
-    h2{font-size:3.8rem;color:var(--p);margin-bottom:40px;text-shadow:0 0 15px var(--p)}
+    section{padding:80px 20px;text-align:center}
+    @media (min-width: 768px) {
+      section{padding:100px 20px;}
+    }
+    h2{font-size:2.8rem;color:var(--p);margin-bottom:40px;text-shadow:0 0 15px var(--p)}
+    @media (min-width: 768px) {
+      h2{font-size:3.8rem;}
+    }
     .about{background:#111c}
-    .about ul{list-style:none;max-width:900px;margin:auto;font-size:1.4rem}
-    .about li{margin:20px 0;padding:15px;background:#f0c1c;border-radius:15px}
+    .about ul{list-style:none;max-width:900px;margin:auto;font-size:1.3rem}
+    @media (min-width: 768px) {
+      .about ul{font-size:1.4rem;}
+    }
+    .about li{margin:20px 0;padding:15px;background:rgba(255,0,102,0.1);border-radius:15px}
 
-    .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:25px;max-width:1400px;margin:50px auto;padding:0 20px}
-    .gallery img{width:100%;height:400px;object-fit:cover;border-radius:20px;box-shadow:0 0 30px #f0c6;transition:.5s}
+    .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;max-width:1400px;margin:50px auto;padding:0 20px}
+    .gallery img{width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;border-radius:20px;box-shadow:0 0 30px rgba(255,0,102,0.4);transition:.5s}
     .gallery img:hover{transform:scale(1.05);box-shadow:0 0 50px var(--a)}
 
     .contact{background:#111}
-    .contact a{color:var(--l);font-size:1.5rem;margin:0 20px}
+    .contact-info{display:flex;flex-direction:column;gap:25px;max-width:600px;margin:0 auto;align-items:flex-start}
+    .contact-item{display:flex;align-items:center;gap:15px;font-size:1.4rem}
+    .contact-item i{color:var(--p);font-size:1.8rem}
+    .contact-item a{color:var(--l);text-decoration:none;transition:0.3s}
+    .contact-item a:hover{color:var(--a)}
+    .social-links{margin-top:30px}
+    .social-links a{margin:0 20px;font-size:2rem;color:var(--l);transition:0.3s}
+    .social-links a:hover{color:var(--p)}
 
-    footer{padding:60px 40px;background:#000;text-align:center}
+    footer{padding:50px 20px;background:#000;text-align:center}
+    @media (min-width: 768px) {
+      footer{padding:60px 40px;}
+    }
     footer .site-url a{color:var(--p);font-size:1.3rem;font-weight:bold;text-decoration:none;transition:0.3s}
     footer .site-url a:hover{color:var(--a);text-decoration:underline}
   </style>
@@ -86,12 +116,20 @@
 
   <section class="contact">
     <h2>Booking Info</h2>
-    <p><strong>Email:</strong> <a href="mailto:oseisolomon1991@gmail.com">oseisolomon1991@gmail.com</a></p>
-    <p><strong>Phone/WhatsApp:</strong> <a href="https://wa.me/233549674474">0549-674-474</a></p>
-    <p>
-      <a href="https://facebook.com/djtrinitygh">Facebook</a> • 
-      <a href="https://instagram.com/djtrinitygh">Instagram</a>
-    </p>
+    <div class="contact-info">
+      <div class="contact-item">
+        <i class="fas fa-envelope"></i>
+        <a href="mailto:oseisolomon1991@gmail.com">oseisolomon1991@gmail.com</a>
+      </div>
+      <div class="contact-item">
+        <i class="fab fa-whatsapp"></i>
+        <a href="https://wa.me/233549674474">0549-674-474</a>
+      </div>
+    </div>
+    <div class="social-links">
+      <a href="https://facebook.com/djtrinitygh" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://instagram.com/djtrinitygh" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    </div>
   </section>
 
   <footer>
